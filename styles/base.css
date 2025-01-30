@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #BBA58F;
+    --secondary-color: #959D90;
+    --accent1-color: #E8D9CD;
+    --accent2-color: #EFEFE9;
+    --accent3-color: #523D35;
+    --accent4-color: #223030;
+
+    --main-text-font: black;
+    --secondary-text-font: white;
+
+    --heading-font: ;
+    --paragraph-font: ;
+}
+
+body{
+    background-color: var(--accent2-color);
+}
