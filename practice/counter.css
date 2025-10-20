@@ -1,0 +1,52 @@
+/* Make it look neat:
+Center the counter in the page
+Add some color and hover effects to the buttons
+When the count is positive, display the number in green
+When negative, display it in red
+When zero, display it in black */
+
+* {
+  box-sizing: border-box;
+}
+
+.myDiv {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#currentCount {
+    font-size: 150px;
+    padding: 20px;
+}
+
+button {
+    margin: 20px;
+    cursor: pointer;
+}
+.increaseBtn {
+  color: green;
+}
+
+.increaseBtn:hover {
+    background-color: green;
+    color: black;
+}
+
+.decreaseBtn {
+    color: red;
+}
+
+.decreaseBtn:hover {
+    background-color: red;
+    color: black;
+}
+
+.resetBtn {
+    color: blue;
+}
+
+.resetBtn:hover {
+    background-color: blue;
+    color: white;
+}

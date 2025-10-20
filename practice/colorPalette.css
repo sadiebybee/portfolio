@@ -1,0 +1,18 @@
+/* CSS (Styling)
+Center everything on the page.
+Give the page a clean and modern look.
+Each saved color box should:
+Show the color as its background.
+Be a small square (like 80×80px).
+Have a border and hover effect (slightly scale or shadow).
+Add spacing between color boxes with flexbox or grid. */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

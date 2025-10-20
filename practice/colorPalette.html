@@ -1,0 +1,28 @@
+<!-- HTML (Structure)
+A heading: “🎨 My Color Palette”
+A color input (<input type="color">)
+A text input to display the selected color’s hex code
+An “Add Color” button
+A section that displays the saved colors in boxes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette Picker</title>
+    <link rel="stylesheet" href="colorPalette.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputColor">
+        <h1>My Color Palette</h1>
+        <input type="color" id="inputColor" />
+        <input type="text" id="inputText" placeholder="Input Hex Code..." />
+        <button id="addBtn">Add Color</button>
+      </div>
+      <div class="savedColors">
+        <ul></ul>
+      </div>
+    </div>
+  </body>
+</html>
