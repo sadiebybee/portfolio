@@ -1,0 +1,26 @@
+/* Center everything on the screen.
+Give the quote text a nice font and some padding.
+Add hover effects on the button. */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+}
+
+.container {
+    padding: 150px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+#quote {
+    padding: 20px;
+}
+
+#quoteBtn {
+    cursor: pointer;
+}
