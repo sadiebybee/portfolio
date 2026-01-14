@@ -14,31 +14,36 @@
     <link rel="stylesheet" href="styles/larger.css" />
   </head>
   <body>
+    <!-- Head/Title -->
     <header class="siteHeader">
       <div id="headerTitle">
         <h3>Sadie Bybee</h3>
-
+        <!-- Navigation -->
         <nav>
           <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
           </ul>
         </nav>
         <button id="menu" aria-label="Toggle navigation"></button>
       </div>
     </header>
     <main>
+      <!-- Hero/Main Content -->
       <div class="container">
-        <h1>Hello, I'm Sadie</h1>
-        <h2>I'm an aspiring Front-End Developer</h2>
+        <h1>Hello, I'm <span class="highlight">Sadie.</span></h1>
+        <h2>
+          I'm an aspiring <span class="highlight">Front-End Developer</span>
+        </h2>
         <p>
           I'm a college student studying Web Design and Development who enjoys
           front-end development and visual problem-solving. I love using HTML,
           CSS, and JavaScript to turn designs into responsive, interactive
           websites.
         </p>
+        <!-- Social Links -->
         <div class="links">
           <a href="https://github.com/sadiebybee" target="_blank">
             <img src="images/githubLogo.png" alt="githubLogo"
@@ -54,13 +59,24 @@
             ><img src="images/handshakeLogo.webp" alt="handshakeLogo"
           /></a>
         </div>
+        <!-- Resume Link -->
         <div class="resumeLink">
           <a href="#">Resume →</a>
         </div>
         <div class="about"></div>
       </div>
+      <div id="heroImg"><img src="images/heroImg.jpeg" alt="Hero Img" width="400"/></div>
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer>
+      <div class="legal">
+        <span
+          ><span id="cYear">&copy;</span> Sadie Bybee Portfolio. All Rights
+          Reserved.</span
+        >
+      </div>
+      <!-- <p id="lastModified"></p> -->
+    </footer>
     <script src="scripts/base.js"></script>
   </body>
 </html>
