@@ -11,7 +11,6 @@
     <meta name="author" content="Sadie Bybee" />
 
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
   </head>
   <body>
     <header class="siteHeader">
@@ -29,13 +28,15 @@
         <button id="menu" aria-label="Toggle navigation"></button>
       </div>
     </header>
-    <main>
-      <section class="directory">
+    <main class="projects">
+      <section id="projectDirectory">
         <h2>My Projects</h2>
-        <div class="menu">
-          <section class="gridBtn">Grid</section>
-          <section class="listBtn">List</section>
-        </div>
+
+        <!-- <div class="menu">
+          <button id="gridBtn">Grid</button>
+          <button id="listBtn">List</button>
+        </div> -->
+
         <article id="projects" class="grid"></article>
       </section>
     </main>
@@ -46,7 +47,6 @@
           Reserved.</span
         >
       </div>
-      <p id="lastModified"></p>
     </footer>
     <script src="scripts/base.js"></script>
   </body>

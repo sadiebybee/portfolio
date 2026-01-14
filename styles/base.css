@@ -16,7 +16,7 @@
 }
 
 /* ****************************************
-   Base Styles
+   Base Styles For Home Page
 **************************************** */
 * {
   box-sizing: border-box;
@@ -27,9 +27,7 @@ body {
   font-family: var(--paragraph-font);
 }
 
-/* ****************************************
-   Navigation / Header
-**************************************** */
+/* Navigation and Header */
 #headerTitle {
   font-family: var(--heading-font);
   display: flex;
@@ -52,18 +50,29 @@ body {
 
 /* Animation */
 @keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-5px); }
-  40% { transform: translateX(5px); }
-  60% { transform: translateX(-5px); }
-  80% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 #headerTitle h3:hover {
   animation: shake 0.5s ease-in-out;
 }
-
 
 /* Main Content */
 
@@ -116,9 +125,7 @@ body {
   display: block;
 }
 
-/* ****************************************
-   Hero / Main Content
-**************************************** */
+/* Hero/Main Content */
 main {
   position: relative;
   margin: 8% auto 1% auto;
@@ -202,10 +209,50 @@ footer {
   padding: 40px;
   text-align: center;
   font-size: 0.9rem;
+  margin: -5px;
 }
 
 /* ****************************************
-   Responsive adjustments
+   Projects Page
+**************************************** */
+
+#projectDirectory h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(58, 47, 43, 0.12);
+  background-color: #fff;
+}
+
+.project h3 {
+  font-size: 2rem;
+}
+
+.project p {
+  font-size: 1rem;
+}
+
+.project a {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+/* ****************************************
+   Responsive adjustments for home page
 **************************************** */
 @media only screen and (min-width: 768px) {
   #menu {
@@ -280,6 +327,14 @@ footer {
   #heroImg img {
     border-radius: 30px;
     border: 8px solid var(--accent1-color);
+  }
+
+  .links {
+    justify-content: left;
+  }
+
+  .resumeLink {
+    text-align: left;
   }
 
   footer {

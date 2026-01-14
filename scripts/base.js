@@ -38,7 +38,96 @@ document.getElementById("cYear").innerHTML = getCopyrightYear();
 
 // Project title
 // Short description
-// Technologies used
 // Screenshot image?
 // Live demo link
 // GitHub repo link
+
+/* ****************************************************
+    Projects
+***************************************************** */
+
+const dataURL = "./projects.json";
+
+async function getProjects() {
+  try {
+    const response = await fetch(dataURL);
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const data = await response.json();
+    displayProjects(data.projects);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+getProjects();
+
+const displayProjects = (projects) => {
+  const cards = document.querySelector("#projects");
+  if (!cards) return;
+
+  projects.forEach((project) => {
+    const pCard = document.createElement("section");
+    pCard.classList.add("project");
+
+    const projectImg = document.createElement("img");
+    projectImg.src = project.image;
+    projectImg.alt = `${project.title} screenshot`;
+    projectImg.loading = "lazy";
+
+    const projectTitle = document.createElement("h3");
+    projectTitle.textContent = project.title;
+
+    const description = document.createElement("p");
+    description.textContent = project.description;
+
+    const links = document.createElement("div");
+    links.classList.add("project-links");
+
+    const liveLink = document.createElement("a");
+    liveLink.href = project.liveLink;
+    liveLink.textContent = "Live Demo";
+    liveLink.target = "_blank";
+    liveLink.rel = "noopener";
+
+    const githubLink = document.createElement("a");
+    githubLink.href = project.githubLink;
+    githubLink.textContent = "GitHub Repo";
+    githubLink.target = "_blank";
+    githubLink.rel = "noopener";
+
+    links.append(liveLink, githubLink);
+
+    pCard.append(
+      projectImg,
+      projectTitle,
+      description,
+      links
+    );
+
+    cards.appendChild(pCard);
+  });
+};
+
+/* ****************************************************
+    Grid / List Toggle
+***************************************************** */
+
+// const gridBtn = document.querySelector("#gridBtn");
+// const listBtn = document.querySelector("#listBtn");
+// const display = document.querySelector("article");
+
+// if (gridBtn && listBtn && display) {
+//   gridBtn.addEventListener("click", () => {
+//     display.classList.add("grid");
+//     display.classList.remove("list");
+//   });
+
+//   listBtn.addEventListener("click", () => {
+//     display.classList.add("list");
+//     display.classList.remove("grid");
+//   });
+// }
