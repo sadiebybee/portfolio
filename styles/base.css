@@ -1,18 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Pacifico&display=swap");
+
 :root {
-    --primary-color: #BBA58F;
-    --secondary-color: #959D90;
-    --accent1-color: #E8D9CD;
-    --accent2-color: #EFEFE9;
-    --accent3-color: #523D35;
-    --accent4-color: #223030;
+  /* --primary-color: #bba58f;
+  --secondary-color: #959d90;
+  --accent1-color: #e8d9cd;
+  --accent2-color: #efefe9;
+  --accent3-color: #523d35;
+  --accent4-color: #223030; */
 
-    --main-text-font: black;
-    --secondary-text-font: white;
+  --main-text-font: black;
+  --secondary-text-font: white;
 
-    --heading-font: ;
-    --paragraph-font: ;
+  --heading-font: "Pacifico";
+  --paragraph-font: "Lexend";
 }
 
-body{
-    background-color: var(--accent2-color);
+body {
+  margin: 0;
+  font-family: var(--paragraph-font);
+}
+
+/* Navigation */
+#headerTitle {
+  font-family: var(--heading-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid black;
+}
+
+#headerTitle h3 {
+  margin: 1.5rem;
+}
+
+#menu {
+  font-size: 1rem;
+  border: 0;
+  background: none;
+  position: fixed;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+#menu::before {
+  font-size: 2rem;
+  content: "☰";
+}
+
+#menu.open::before {
+  font-size: 2rem;
+  content: "🆇";
+}
+
+.navigation {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  font-family: var(--paragraph-font);
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.navigation li {
+  display: none;
+  margin: 10px;
+  padding: 0.5rem;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  text-decoration: underline;
+}
+
+.open li {
+  display: block;
+}
+
+/* Main Hero Content */
+main {
+  margin: 30% 20px;
+}
+
+.links img {
+  width: 30px;
+  height: auto;
+  padding: 10px;
+}
+
+.resumeLink {
+  text-align: center;
+  padding: 10px;
+  margin-left: 10px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.resumeLink a {
+  text-decoration: none;
+}
+
+.resumeLink a:hover {
+  text-decoration: underline;
 }
