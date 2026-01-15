@@ -87,26 +87,25 @@ const displayProjects = (projects) => {
     const links = document.createElement("div");
     links.classList.add("project-links");
 
-    const liveLink = document.createElement("a");
-    liveLink.href = project.liveLink;
-    liveLink.textContent = "Live Demo";
-    liveLink.target = "_blank";
-    liveLink.rel = "noopener";
+    if (project.liveLink) {
+      const liveLink = document.createElement("a");
+      liveLink.href = project.liveLink;
+      liveLink.textContent = "Live Demo";
+      liveLink.target = "_blank";
+      liveLink.rel = "noopener";
+      links.appendChild(liveLink);
+    }
 
-    const githubLink = document.createElement("a");
-    githubLink.href = project.githubLink;
-    githubLink.textContent = "GitHub Repo";
-    githubLink.target = "_blank";
-    githubLink.rel = "noopener";
+    if (project.githubLink) {
+      const githubLink = document.createElement("a");
+      githubLink.href = project.githubLink;
+      githubLink.textContent = "GitHub Repo";
+      githubLink.target = "_blank";
+      githubLink.rel = "noopener";
+      links.append(githubLink);
+    }
 
-    links.append(liveLink, githubLink);
-
-    pCard.append(
-      projectImg,
-      projectTitle,
-      description,
-      links
-    );
+    pCard.append(projectImg, projectTitle, description, links);
 
     cards.appendChild(pCard);
   });

@@ -1,25 +1,29 @@
 {
   "projects": [
     {
-      "title": "Test1",
-      "description": "This is test 1",
-      "image": "image1",
-      "liveLink": "live link 1",
-      "githubLink": "github link 1"
+      "title": "Task Tracker App - Angular & Node.js Full-Stack Project",
+      "description": "A full-stack task management web application that allows users to create, update, and track tasks in real-time.",
+      "image": "images/tasktracker.png",
+      "githubLink": "https://github.com/sadiebybee/task-tracker"
     },
     {
-      "title": "Test2",
-      "description": "This is test 2",
-      "image": "image2",
-      "liveLink": "live link 2",
-      "githubLink": "github link 2"
-    },
-    {
-      "title": "Test3",
-      "description": "This is test 3",
+      "title": "Wardrobe App - Full-Stack React & Node.js Project",
+      "description": "A full-stack web application to create outfits, organize, track, and manage clothing items with user accounts and interactive features.",
       "image": "image3",
-      "liveLink": "live link 3",
-      "githubLink": "github link 3"
+      "githubLink": "https://github.com/YesterFence/WardrobeApp"
+    },
+    {
+      "title": "Chamber of Commerce Website - HTML/CSS/JS Project",
+      "description": "A responsive, interactive website for a local Chamber of Commerce, featuring member directories, events, and business information.",
+      "image": "images/chamberOfCommerce.png",
+      "liveLink": "https://sadiebybee.github.io/wdd230/chamber/index.html",
+      "githubLink": "https://github.com/sadiebybee/wdd230/tree/main/chamber"
+    },
+    {
+      "title": "Mamoru Martial Arts - Project Based Class",
+      "description": "Assisted in improving the Mamoru Martial Arts website by improving usability and visual design, enhancing user navigation and increasing online engagement from prospective students,",
+      "image": "images/mamoruMartialArts.png",
+      "liveLink": "https://www.mamorumartialarts.com/"
     }
   ]
 }

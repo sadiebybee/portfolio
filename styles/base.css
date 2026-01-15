@@ -4,9 +4,10 @@
    :root Variables
 **************************************** */
 :root {
-  --primary-color: #f0e6df; /* very light pink-beige */
+  --primary-color: #f9ece8; /* very light pink-beige */
   --secondary-color: #e5c7bb; /* light blush */
   --accent1-color: #c8a894; /* dusty pink-brown accent */
+  --accent2-color: #faf6f4;
 
   --main-text-color: #3a2f2b; /* warm dark text */
   --secondary-text-color: #ffffff; /* light text if needed */
@@ -25,6 +26,7 @@
 body {
   margin: 0;
   font-family: var(--paragraph-font);
+  background-color: var(--accent2-color);
 }
 
 /* Navigation and Header */
@@ -126,7 +128,7 @@ body {
 }
 
 /* Hero/Main Content */
-main {
+.home {
   position: relative;
   margin: 8% auto 1% auto;
   padding: 2rem;
@@ -155,8 +157,9 @@ main p {
 .container {
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(58, 47, 43, 0.08),
-    0 20px 40px rgba(58, 47, 43, 0.06);
+  background-color: var(--secondary-text-color);
+  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+    0 2px 8px rgba(82, 61, 53, 0.08);
 }
 
 #heroImg {
@@ -196,7 +199,8 @@ main p {
     var(--secondary-color),
     var(--accent1-color)
   );
-  box-shadow: 0 10px 30px rgba(58, 47, 43, 0.12);
+  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+    0 2px 8px rgba(82, 61, 53, 0.08);
   display: inline-block;
 }
 
@@ -215,11 +219,15 @@ footer {
 /* ****************************************
    Projects Page
 **************************************** */
+main {
+  margin: 8% auto 1% auto;
+  padding: 2rem;
+}
 
 #projectDirectory h2 {
   text-align: center;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .project {
@@ -227,21 +235,39 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(58, 47, 43, 0.12);
+  border-radius: 20px;
   background-color: #fff;
+  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+    0 2px 8px rgba(82, 61, 53, 0.08);
 }
 
 .project h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .project p {
+  margin-top: 0;
   font-size: 1rem;
 }
 
 .project a {
   padding: 30px;
+  text-decoration: none;
+  color: var(--accent1-color);
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.project img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .grid {
@@ -261,7 +287,7 @@ footer {
 
   .siteHeader {
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid darkgray;
     background-color: var(--primary-color);
     padding: 15px;
   }
@@ -304,7 +330,7 @@ footer {
 
   /* Main Content */
 
-  main {
+  .home {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
@@ -340,5 +366,34 @@ footer {
   footer {
     padding: 20px;
     text-align: left;
+  }
+
+  /* ****************************************
+   Responsive adjustments for project page
+  **************************************** */
+  .projectPage {
+    margin: 0;
+  }
+
+  #projectDirectory {
+    margin: -30px;
+    padding: 50px;
+  }
+
+  #projectDirectory h2 {
+    margin: 0;
+    text-align: left;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 }
