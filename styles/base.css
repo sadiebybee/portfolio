@@ -278,7 +278,61 @@ main {
 }
 
 /* ****************************************
-   Responsive adjustments for home page
+  Contacts Page
+**************************************** */
+#contactContainer {
+  margin-top: 30px;
+  padding: 0;
+}
+
+#contactContainer h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#contactContainer p {
+  text-align: center;
+}
+
+.contactCard {
+  display: flex;
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid var(--accent1-color);
+  border-radius: 20px;
+  background-color: var(--secondary-text-color);
+  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+    0 2px 8px rgba(82, 61, 53, 0.08);
+}
+
+.contactCard:hover {
+  box-shadow: 0 12px 32px rgba(82, 61, 53, 0.28),
+    0 4px 12px rgba(82, 61, 53, 0.16);
+}
+
+.contactCard img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.contactCard p {
+  padding-left: 15px;
+}
+
+.contactCard a {
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.contactCard a:hover {
+  text-decoration: underline;
+}
+
+/* ****************************************
+  Responsive adjustments for home page
 **************************************** */
 @media only screen and (min-width: 768px) {
   #menu {
