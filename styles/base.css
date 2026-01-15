@@ -217,7 +217,7 @@ footer {
 }
 
 /* ****************************************
-   Projects Page
+  Projects Page
 **************************************** */
 main {
   margin: 8% auto 1% auto;
@@ -423,7 +423,7 @@ main {
   }
 
   /* ****************************************
-   Responsive adjustments for project page
+  Responsive adjustments for project page
   **************************************** */
   .projectPage {
     margin: 0;
@@ -449,5 +449,41 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+
+  /* ****************************************
+  Responsive adjustments for contact page
+**************************************** */
+  #contactPage {
+    margin-top: 32px;
+    padding-top: 0;
+  }
+
+  #contactContainer {
+    margin: -30px;
+    padding: 50px;
+  }
+
+  #contactContainer h2 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  #contactContainer p {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .cardDeck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .contactFooter {
+    margin-top: 50px;
   }
 }
