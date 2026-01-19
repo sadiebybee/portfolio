@@ -158,7 +158,8 @@ main p {
   padding: 2rem;
   border-radius: 20px;
   background-color: var(--secondary-text-color);
-  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+  box-shadow:
+    0 8px 24px rgba(82, 61, 53, 0.16),
     0 2px 8px rgba(82, 61, 53, 0.08);
 }
 
@@ -199,7 +200,8 @@ main p {
     var(--secondary-color),
     var(--accent1-color)
   );
-  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+  box-shadow:
+    0 8px 24px rgba(82, 61, 53, 0.16),
     0 2px 8px rgba(82, 61, 53, 0.08);
   display: inline-block;
 }
@@ -239,7 +241,8 @@ main {
   padding: 30px;
   border-radius: 20px;
   background-color: #fff;
-  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+  box-shadow:
+    0 8px 24px rgba(82, 61, 53, 0.16),
     0 2px 8px rgba(82, 61, 53, 0.08);
 }
 
@@ -302,12 +305,14 @@ main {
   border: 2px solid var(--accent1-color);
   border-radius: 20px;
   background-color: var(--secondary-text-color);
-  box-shadow: 0 8px 24px rgba(82, 61, 53, 0.16),
+  box-shadow:
+    0 8px 24px rgba(82, 61, 53, 0.16),
     0 2px 8px rgba(82, 61, 53, 0.08);
 }
 
 .contactCard:hover {
-  box-shadow: 0 12px 32px rgba(82, 61, 53, 0.28),
+  box-shadow:
+    0 12px 32px rgba(82, 61, 53, 0.28),
     0 4px 12px rgba(82, 61, 53, 0.16);
 }
 
@@ -329,6 +334,66 @@ main {
 
 .contactCard a:hover {
   text-decoration: underline;
+}
+
+/* ****************************************
+  About Me Page
+**************************************** */
+#aboutContainer {
+  margin-top: 30px;
+  padding: 0;
+}
+
+#aboutContainer h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#aboutContainer p {
+  text-align: center;
+}
+
+.skills {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow:
+    0 8px 24px rgba(82, 61, 53, 0.16),
+    0 2px 8px rgba(82, 61, 53, 0.08);
+}
+
+.skills h3 {
+  text-align: center;
+}
+
+.skills hr {
+  color: #000;
+}
+
+.skillCard {
+  padding: 0;
+}
+
+.skillCard ul {
+  padding: 0.5rem;
+}
+
+.skillCard li {
+  list-style-type: none;
+  text-align: center;
+  margin: 10px 50px;
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(
+    15deg,
+    var(--secondary-color),
+    var(--accent1-color)
+  );
+  box-shadow:
+    0 8px 24px rgba(82, 61, 53, 0.16),
+    0 2px 8px rgba(82, 61, 53, 0.08);
 }
 
 /* ****************************************
