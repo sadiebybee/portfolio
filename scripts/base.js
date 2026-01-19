@@ -1,74 +1,80 @@
-// Navigation and Menu
+/* =====================================================
+   Utilities
+===================================================== */
+
+// Last Modified
+const dateOptions = {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: true,
+};
+
+function getLastModified() {
+  return new Date(document.lastModified).toLocaleDateString(
+    "en-US",
+    dateOptions
+  );
+}
+
+// Copyright Year
+function getCopyrightYear() {
+  return new Date().getFullYear();
+}
+
+// Insert footer values (safe on all pages)
+const lastModifiedEl = document.querySelector("#lastModified");
+if (lastModifiedEl) {
+  lastModifiedEl.textContent = `Last Modified: ${getLastModified()}`;
+}
+
+const cYearEl = document.querySelector("#cYear");
+if (cYearEl) {
+  cYearEl.innerHTML = `&copy; ${getCopyrightYear()}`;
+}
+
+/* =====================================================
+   Navigation / Hamburger Menu
+===================================================== */
+
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
-hamButton.addEventListener("click", () => {
-  navigation.classList.toggle("open");
-  hamButton.classList.toggle("open");
-});
-
-// Display Copyright
-function getCopyrightYear() {
-  const year = new Date().getFullYear();
-  return `&copy; ${year}`;
+if (hamButton && navigation) {
+  hamButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
+  });
 }
-document.getElementById("cYear").innerHTML = getCopyrightYear();
 
-// // Display Last Modified
-// const options = {
-//   month: "short",
-//   day: "numeric",
-//   year: "numeric",
-//   hour: "2-digit",
-//   minute: "2-digit",
-//   second: "2-digit",
-//   hour12: true,
-// };
+/* =====================================================
+   Projects Page Logic
+===================================================== */
 
-// function getLastModified() {
-//   const lastModified = new Date(document.lastModified).toLocaleDateString(
-//     "en-US",
-//     options
-//   );
-//   return `Last Modified: ${lastModified}`;
-// }
-// document.getElementById("lastModified").innerHTML = getLastModified();
-
-// Project Directory Page
-
-// Project title
-// Short description
-// Screenshot image?
-// Live demo link
-// GitHub repo link
-
-/* ****************************************************
-    Projects
-***************************************************** */
-
+const projectsContainer = document.querySelector("#projects");
 const dataURL = "./projects.json";
 
 async function getProjects() {
+  if (!projectsContainer) return;
+
   try {
     const response = await fetch(dataURL);
 
     if (!response.ok) {
-      throw new Error("Failed to fetch data");
+      throw new Error("Failed to fetch project data");
     }
 
     const data = await response.json();
     displayProjects(data.projects);
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching projects:", error);
   }
 }
 
-getProjects();
-
-const displayProjects = (projects) => {
-  const cards = document.querySelector("#projects");
-  if (!cards) return;
-
+function displayProjects(projects) {
   projects.forEach((project) => {
     const pCard = document.createElement("section");
     pCard.classList.add("project");
@@ -102,22 +108,23 @@ const displayProjects = (projects) => {
       githubLink.textContent = "GitHub Repo";
       githubLink.target = "_blank";
       githubLink.rel = "noopener";
-      links.append(githubLink);
+      links.appendChild(githubLink);
     }
 
     pCard.append(projectImg, projectTitle, description, links);
-
-    cards.appendChild(pCard);
+    projectsContainer.appendChild(pCard);
   });
-};
+}
 
-/* ****************************************************
-    Grid / List Toggle
-***************************************************** */
+getProjects();
+
+/* =====================================================
+   Grid / List Toggle 
+===================================================== */
 
 // const gridBtn = document.querySelector("#gridBtn");
 // const listBtn = document.querySelector("#listBtn");
-// const display = document.querySelector("article");
+// const display = document.querySelector("#projects");
 
 // if (gridBtn && listBtn && display) {
 //   gridBtn.addEventListener("click", () => {
